@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Analog Clock</title>
     <style>
       body {
         background-color: #006064;
+        display: flex;
+        align-items: center;
+        min-height: 98vh;
       }
       .clockcontainer {
         background: url(./bg.png) no-repeat;
@@ -59,15 +62,21 @@
         transform-origin: bottom;
         /* display: none; */
       }
-      @keyframes glow{
-        0%{
+      @keyframes glow {
+        0% {
           box-shadow: 0px 0px 0px 0px #ffff00;
         }
-        50%{
+        50% {
           box-shadow: 0px 0px 65px 7px #ffff00;
         }
-        100%{
+        100% {
           box-shadow: 0px 0px 0px 0px #ffff00;
+        }
+      }
+      @media screen and (max-width:750px) {
+        .clockcontainer {
+          height: 85vw;
+          width: 85vw;
         }
       }
     </style>
